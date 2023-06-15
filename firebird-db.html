@@ -1,27 +1,27 @@
 
-<script type="text/x-red" data-template-name="firebird-database">
+<script type="text/x-red" data-template-name="firebird-database-role">
     <div class="form-row">
-        <label for="node-config-input-host"><i class="fa fa-globe"></i> <span data-i18n="firebird-db-roles.label.host"></span></label>
+        <label for="node-config-input-host"><i class="fa fa-globe"></i> <span data-i18n="firebird-db-role.label.host"></span></label>
         <input type="text" id="node-config-input-host">
     </div>
     <div class="form-row">
-        <label for="node-config-input-port"><i class="fa fa-random"></i> <span data-i18n="firebird-db-roles.label.port"></span></label>
+        <label for="node-config-input-port"><i class="fa fa-random"></i> <span data-i18n="firebird-db-role.label.port"></span></label>
         <input type="text" id="node-config-input-port">
     </div>
     <div class="form-row">
-        <label for="node-config-input-user"><i class="fa fa-user"></i> <span data-i18n="firebird-db-roles.label.user"></span></label>
+        <label for="node-config-input-user"><i class="fa fa-user"></i> <span data-i18n="firebird-db-role.label.user"></span></label>
         <input type="text" id="node-config-input-user">
     </div>
     <div class="form-row">
-        <label for="node-config-input-pass"><i class="fa fa-lock"></i> <span data-i18n="firebird-db-roles.label.password"></span></label>
+        <label for="node-config-input-pass"><i class="fa fa-lock"></i> <span data-i18n="firebird-db-role.label.password"></span></label>
         <input type="password" id="node-config-input-password">
     </div>
     <div class="form-row">
-        <label for="node-config-input-db"><i class="fa fa-database"></i> <span data-i18n="firebird-db-roles.label.database"></span></label>
+        <label for="node-config-input-db"><i class="fa fa-database"></i> <span data-i18n="firebird-db-role.label.database"></span></label>
         <input type="text" id="node-config-input-db">
     </div>
     <div class="form-row">
-        <label for="node-config-input-role"><i class="fa fa-database"></i> <span data-i18n="firebird-db-roles.label.role"></span></label>
+        <label for="node-config-input-role"><i class="fa fa-database"></i> <span data-i18n="firebird-db-role.label.role"></span></label>
         <input type="text" id="node-config-input-role">
     </div>
 </script>
@@ -46,25 +46,25 @@
 </script>
 
 
-<script type="text/x-red" data-template-name="firebird-db-roles">
+<script type="text/x-red" data-template-name="firebird-db-role">
     <div class="form-row">
-        <label for="node-input-firebirddb"><i class="fa fa-database"></i> <span data-i18n="firebird-db-roles.label.database"></span></label>
+        <label for="node-input-firebirddb"><i class="fa fa-database-role"></i> <span data-i18n="firebird-db-role.label.database"></span></label>
         <input type="text" id="node-input-firebirddb">
     </div>
     <div class="form-row">
-        <label for="node-input-requesttype"><i class="fa fa-quote-left"></i> <span data-i18n="firebird-db-roles.label.requesttype"></span></label>
+        <label for="node-input-requesttype"><i class="fa fa-quote-left"></i> <span data-i18n="firebird-db-role.label.requesttype"></span></label>
         <select id="node-input-requesttype" style="width:70%;">
-            <option value="query" data-i18n="firebird-db-roles.requesttype.query"></option>
-            <option value="transaction" data-i18n="firebird-db-roles.requesttype.transaction"></option>
+            <option value="query" data-i18n="firebird-db-role.requesttype.query"></option>
+            <option value="transaction" data-i18n="firebird-db-role.requesttype.transaction"></option>
         </select>
     </div>
     <div class="form-row">
-        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="firebird-db-roles.label.name"></span></label>
+        <label for="node-input-name"><i class="fa fa-tag"></i> <span data-i18n="firebird-db-role.label.name"></span></label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="firebird-db">
+<script type="text/x-red" data-help-name="firebird-db-role">
     <p>Allows basic access to a Firebird database with the usage of roles.</p>
     <p>This node uses the <b>query</b> operation against the configured database. This does allow both INSERTS and DELETES.
     By its very nature it allows SQL injection... so <i>be careful out there...</i></p>
@@ -75,7 +75,7 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('firebird-db',{
+    RED.nodes.registerType('firebird-db-role',{
         category: 'storage-input',
         color:"#fba70f",
         defaults: {
@@ -88,7 +88,7 @@
         icon: "db.png",
         label: function() {
             var levelNode = RED.nodes.node(this.firebirddb);
-            return this.name||(levelNode?levelNode.label():"firebird-db");
+            return this.name||(levelNode?levelNode.label():"firebird-db-role");
         },
             labelStyle: function() {
             return this.name?"node_label_italic":"";

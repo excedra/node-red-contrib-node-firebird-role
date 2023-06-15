@@ -125,5 +125,5 @@ module.exports = function(RED) {
             this.error("Firebird database not configured");
         }
     }
-    RED.nodes.registerType("firebird-db",FirebirdDBNodeIn);
+    RED.nodes.registerType("firebird-db-role",FirebirdDBNodeIn);
 }
