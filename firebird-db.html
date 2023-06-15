@@ -27,7 +27,7 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('firebird-database',{
+    RED.nodes.registerType('firebird-database-role',{
         category: 'config',
         defaults: {
             host: {value:"127.0.0.1",required:true},
@@ -79,7 +79,7 @@
         category: 'storage-input',
         color:"#fba70f",
         defaults: {
-            firebirddb: {type:"firebird-database",required:true},
+            firebirddb: {type:"firebird-database-role",required:true},
             requesttype: {value:"query",required:true},
             name: {value:""}
         },

@@ -83,7 +83,7 @@ module.exports = function(RED) {
             done();
         });
     }
-    RED.nodes.registerType("firebird-database",FirebirdNode, {
+    RED.nodes.registerType("firebird-database-role",FirebirdNode, {
         credentials: {
             user: {type: "text"},
             password: {type: "password"}
