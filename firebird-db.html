@@ -20,6 +20,10 @@
         <label for="node-config-input-db"><i class="fa fa-database"></i> <span data-i18n="firebird-db.label.database"></span></label>
         <input type="text" id="node-config-input-db">
     </div>
+    <div class="form-row">
+        <label for="node-config-input-role"><i class="fa fa-database"></i> <span data-i18n="firebird-db.label.role"></span></label>
+        <input type="text" id="node-config-input-role">
+    </div>
 </script>
 
 <script type="text/javascript">
@@ -29,6 +33,7 @@
             host: {value:"127.0.0.1",required:true},
             port: {value:"3050",required:true},
             db: {value:"",required:true},
+            role: {value:"",required:false}
         },
         credentials: {
             user: {type: "text"},
@@ -60,7 +65,7 @@
 </script>
 
 <script type="text/x-red" data-help-name="firebird-db">
-    <p>Allows basic access to a Firebird database.</p>
+    <p>Allows basic access to a Firebird database with the usage of roles.</p>
     <p>This node uses the <b>query</b> operation against the configured database. This does allow both INSERTS and DELETES.
     By its very nature it allows SQL injection... so <i>be careful out there...</i></p>
     <p>For <b>Query type</b> = <b>Simple query</b>: The <code>msg.topic</code> must hold the <i>query</i> for the database, and the result is returned in <code>msg.payload</code>.</p>

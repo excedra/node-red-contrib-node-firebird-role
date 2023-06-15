@@ -9,6 +9,7 @@ module.exports = function(RED) {
         this.host = n.host;
         this.port = n.port;
         this.dbname = n.db;
+        this.role = n.role;
         var node = this;
         this.query=function(query, requesttype, done){
             var result=null;
@@ -18,7 +19,7 @@ module.exports = function(RED) {
                 database: node.dbname,
                 user: node.credentials.user,
                 password: node.credentials.password,
-                role: null,
+                role: node.role,
                 pageSize: 4096
             }, function(err,db) {
                if (err){
