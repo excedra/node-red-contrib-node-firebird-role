@@ -1,9 +1,9 @@
-node-red-contrib-node-firebird
+node-red-contrib-node-firebird-role
 ========================
 
 This is a fork of [node-red-contrib-node-firebird](https://flows.nodered.org/node/node-red-contrib-node-firebird)
 
-A <a href="http://nodered.org" target="_new">Node-RED</a> node to read and write to a Firebird database.
+A <a href="http://nodered.org" target="_new">Node-RED</a> node to read and write to a Firebird database with the usage of roles.
 
 Install
 -------
@@ -20,7 +20,7 @@ Allows basic access to a Firebird database with the usage of roles.
 
 This node uses the <b>query</b> operation against the configured database. This does allow both INSERTS and DELETES.
 
-By it's very nature it allows SQL injection... so <i>be careful out there...</i>
+By it's very nature it allows SQL injection.
 
 For <b>Query type</b> = <b>Simple query</b>:
     The `msg.topic` must hold the <i>query</i> for the database, and the result is returned in `msg.payload`.
