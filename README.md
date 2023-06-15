@@ -1,7 +1,7 @@
 node-red-contrib-node-firebird
 ========================
 
-This is a fork of [node-red-node-firebird](https://github.com/phantom21/node-red-node-firebird)
+This is a fork of [node-red-contrib-node-firebird](https://flows.nodered.org/node/node-red-contrib-node-firebird)
 
 A <a href="http://nodered.org" target="_new">Node-RED</a> node to read and write to a Firebird database.
 
