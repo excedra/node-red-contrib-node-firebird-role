@@ -10,13 +10,13 @@ Install
 
 Run the following command in your Node-RED user directory - typically `~/.node-red`
 
-    npm install node-red-contrib-node-firebird
+    npm install node-red-contrib-node-firebird-role
 
 
 Usage
 -----
 
-Allows basic access to a Firebird database.
+Allows basic access to a Firebird database with the usage of roles.
 
 This node uses the <b>query</b> operation against the configured database. This does allow both INSERTS and DELETES.
 
