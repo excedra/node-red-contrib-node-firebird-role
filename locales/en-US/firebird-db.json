@@ -1,5 +1,5 @@
 {
-    "firebird-db" : {
+    "firebird-db-role" : {
         "label": {
             "database": "Database",
             "host": "Host",
@@ -7,6 +7,7 @@
             "user": "User",
             "password": "Password",
             "name": "Name",
+            "role": "Role",
             "requesttype": "Query type"
         },
         "requesttype": {
